@@ -1,0 +1,1100 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/privacy/ontologies/PROCI"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/privacy/ontologies/PROCI">
+    <Prefix name="" IRI="http://www.semanticweb.org/privacy/ontologies/PROCI"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="proci" IRI="http://www.semanticweb.org/privacy/ontologies/PROCI#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>A Privacy Ontology based on Contextual Integrity</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EMContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emergency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FRContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PRContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrivateInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ThirdParty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ThirdPartyAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#allow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#disallow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAccessRequest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inAccidentContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inEMContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inFRContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inPRContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isColleagueOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFriendOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#worksAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inAccident"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#admin-officer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#alice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#alice-agent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bob"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bob-agent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bob-loc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bob-mobile"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bob-salary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#charlie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#charlie-agent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#em-responder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#em-state"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#emc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#frc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#health-and-safety-manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#line-manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#office"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prc"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Role"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#admin-officer"/>
+            <NamedIndividual IRI="#em-responder"/>
+            <NamedIndividual IRI="#health-and-safety-manager"/>
+            <NamedIndividual IRI="#line-manager"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#EMContext"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emergency"/>
+        <Class IRI="#Situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FRContext"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PRContext"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrivateInformation"/>
+        <Class IRI="#Information"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicInformation"/>
+        <Class IRI="#Information"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThirdParty"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThirdPartyAgent"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserAgent"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#PrivateInformation"/>
+        <Class IRI="#PublicInformation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ThirdParty"/>
+        <Class IRI="#ThirdPartyAgent"/>
+        <Class IRI="#User"/>
+        <Class IRI="#UserAgent"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Role"/>
+        <NamedIndividual IRI="#admin-officer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#alice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserAgent"/>
+        <NamedIndividual IRI="#alice-agent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#bob"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserAgent"/>
+        <NamedIndividual IRI="#bob-agent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PrivateInformation"/>
+        <NamedIndividual IRI="#bob-loc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PrivateInformation"/>
+        <NamedIndividual IRI="#bob-mobile"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PrivateInformation"/>
+        <NamedIndividual IRI="#bob-salary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#charlie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserAgent"/>
+        <NamedIndividual IRI="#charlie-agent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Role"/>
+        <NamedIndividual IRI="#em-responder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Emergency"/>
+        <NamedIndividual IRI="#em-state"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EMContext"/>
+        <NamedIndividual IRI="#emc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FRContext"/>
+        <NamedIndividual IRI="#frc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Role"/>
+        <NamedIndividual IRI="#health-and-safety-manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Role"/>
+        <NamedIndividual IRI="#line-manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#office"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PRContext"/>
+        <NamedIndividual IRI="#prc"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAccessRequest"/>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#bob-loc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAccessRequest"/>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#bob-mobile"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAccessRequest"/>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#bob-salary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRole"/>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#em-responder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRole"/>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#health-and-safety-manager"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#bob"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#charlie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#worksAt"/>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#office"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <NamedIndividual IRI="#bob"/>
+        <NamedIndividual IRI="#charlie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isIn"/>
+        <NamedIndividual IRI="#bob"/>
+        <NamedIndividual IRI="#em-state"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owns"/>
+        <NamedIndividual IRI="#bob"/>
+        <NamedIndividual IRI="#bob-loc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owns"/>
+        <NamedIndividual IRI="#bob"/>
+        <NamedIndividual IRI="#bob-mobile"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owns"/>
+        <NamedIndividual IRI="#bob"/>
+        <NamedIndividual IRI="#bob-salary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#worksAt"/>
+        <NamedIndividual IRI="#bob"/>
+        <NamedIndividual IRI="#office"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAccessRequest"/>
+        <NamedIndividual IRI="#charlie"/>
+        <NamedIndividual IRI="#bob-loc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAccessRequest"/>
+        <NamedIndividual IRI="#charlie"/>
+        <NamedIndividual IRI="#bob-mobile"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAccessRequest"/>
+        <NamedIndividual IRI="#charlie"/>
+        <NamedIndividual IRI="#bob-salary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRole"/>
+        <NamedIndividual IRI="#charlie"/>
+        <NamedIndividual IRI="#admin-officer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#worksAt"/>
+        <NamedIndividual IRI="#charlie"/>
+        <NamedIndividual IRI="#office"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inAccident"/>
+        <NamedIndividual IRI="#bob"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#inEMContext"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#inFRContext"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#inPRContext"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#inAccidentContext"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#inEMContext"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#inFRContext"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#inPRContext"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isColleagueOf"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isFriendOf"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#allow"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#disallow"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAccessRequest"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRole"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inAccidentContext"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inContext"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inEMContext"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inFRContext"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inPRContext"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFriendOf"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isIn"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#owns"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#worksAt"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#allow"/>
+        <Class IRI="#Information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#disallow"/>
+        <Class IRI="#Information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAccessRequest"/>
+        <Class IRI="#Information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRole"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#inAccidentContext"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#inContext"/>
+        <Class IRI="#Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#inEMContext"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#inFRContext"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#inPRContext"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isFriendOf"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isIn"/>
+        <Class IRI="#Situation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#owns"/>
+        <Class IRI="#Information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#worksAt"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inAccident"/>
+        <Class IRI="#Agent"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#inAccident"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>I3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Emergency"/>
+                <Variable IRI="#em"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isIn"/>
+                <Variable IRI="#user"/>
+                <Variable IRI="#em"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasRole"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#em-responder"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inEMContext"/>
+                <Variable IRI="#user"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>A6</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#owns"/>
+                <NamedIndividual IRI="#bob"/>
+                <NamedIndividual IRI="#bob-salary"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inPRContext"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasRole"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#admin-officer"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasAccessRequest"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-salary"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#allow"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-salary"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>A5</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#owns"/>
+                <NamedIndividual IRI="#bob"/>
+                <NamedIndividual IRI="#bob-salary"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inAccidentContext"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasRole"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#health-and-safety-manager"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasAccessRequest"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-salary"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#allow"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-salary"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>A3</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#owns"/>
+                <NamedIndividual IRI="#bob"/>
+                <NamedIndividual IRI="#bob-loc"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inFRContext"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasAccessRequest"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-loc"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#disallow"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-loc"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>A1</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#owns"/>
+                <NamedIndividual IRI="#bob"/>
+                <NamedIndividual IRI="#bob-loc"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inPRContext"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasAccessRequest"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-loc"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#allow"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-loc"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>A2</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#owns"/>
+                <NamedIndividual IRI="#bob"/>
+                <NamedIndividual IRI="#bob-mobile"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inEMContext"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasAccessRequest"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-mobile"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#allow"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-mobile"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>A4</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#owns"/>
+                <NamedIndividual IRI="#bob"/>
+                <NamedIndividual IRI="#bob-salary"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inPRContext"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasRole"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#health-and-safety-manager"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasAccessRequest"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-salary"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#disallow"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-salary"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>I2</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#worksAt"/>
+                <Variable IRI="#user"/>
+                <NamedIndividual IRI="#office"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasRole"/>
+                <Variable IRI="#tp"/>
+                <Variable IRI="#role"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#worksAt"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#office"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inPRContext"/>
+                <Variable IRI="#user"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>I4</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#inAccident"/>
+                <NamedIndividual IRI="#bob"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasRole"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#health-and-safety-manager"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inAccidentContext"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>I-C1</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inEMContext"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inContext"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#emc"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inContext"/>
+                <Variable IRI="#y"/>
+                <NamedIndividual IRI="#emc"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>I-C2</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inFRContext"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inContext"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#frc"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inContext"/>
+                <Variable IRI="#y"/>
+                <NamedIndividual IRI="#frc"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>P2</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#owns"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#info"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inFRContext"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#disallow"/>
+                <Variable IRI="#tp"/>
+                <Variable IRI="#info"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>I-C3</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inPRContext"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inContext"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#prc"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inContext"/>
+                <Variable IRI="#y"/>
+                <NamedIndividual IRI="#prc"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>P1</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#owns"/>
+                <NamedIndividual IRI="#bob"/>
+                <NamedIndividual IRI="#bob-loc"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inPRContext"/>
+                <NamedIndividual IRI="#bob"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#allow"/>
+                <Variable IRI="#tp"/>
+                <NamedIndividual IRI="#bob-loc"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>I1</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isFriendOf"/>
+                <Variable IRI="#user"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#inFRContext"/>
+                <Variable IRI="#user"/>
+                <Variable IRI="#tp"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
